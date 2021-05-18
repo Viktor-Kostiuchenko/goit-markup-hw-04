@@ -193,6 +193,29 @@ ol {
   color: var(--accent-color);
 }
 
+.contact-item {
+  display: flex;
+  align-items: center;
+}
+
+.contact-item::before {
+  content: "";
+  margin-right: 10px;
+  background-size: contain;
+}
+
+.contact-item:nth-child(1)::before {
+  width: 16px;
+  height: 12px;
+  background-image: url(../images/icons/envelope.svg);
+}
+
+.contact-item:nth-child(2)::before {
+  width: 10px;
+  height: 16px;
+  background-image: url(../images/icons/smartphone.svg);
+}
+
 /* ! ===================================END OF HEADER=================================== */
 
 /* ! =====================================FOOTER===================================== */
@@ -201,6 +224,15 @@ ol {
   padding: 60px 0;
 
   background-color: var(--secondary-bcg-color);
+}
+
+.footer > .container {
+  display: flex;
+  align-items: baseline;
+}
+
+.company-address {
+  margin-right: 70px;
 }
 
 .address {
@@ -230,14 +262,28 @@ ol {
 .footer-contact .link:focus {
   color: var(--accent-color);
 }
+
+.company-socials .socials {
+  display: flex;
+}
+
+.company-socials .socials .social-item a {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.join {
+  display: block;
+  margin-bottom: 20px;
+  color: var(--primary-white-color);
+  text-transform: uppercase;
+  line-height: 1.17;
+}
 /* ! ===================================END OF FOOTER=================================== */
 
 /* ! ===================================INDEX.HTML=================================== */
 /** Hero */
 .hero {
   padding: 200px 0;
-
-  background-color: var(--secondary-bcg-color);
   text-align: center;
 }
 
@@ -253,6 +299,22 @@ ol {
   line-height: 1.36;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+}
+
+.overlay {
+  height: 600px;
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: var(--secondary-bcg-color);
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/main-page/main/hero.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 /** Button */
@@ -301,6 +363,34 @@ ol {
   margin-right: 30px;
 }
 
+.feature-item::before {
+  display: block;
+  content: "";
+  height: 120px;
+  margin-bottom: 30px;
+
+  background-repeat: no-repeat;
+  background-size: 70px 70px;
+  background-position: center;
+  background-color: var(--primary-bcg-color);
+}
+
+.feature-item:nth-child(1)::before {
+  background-image: url(../images/icons/antenna.svg);
+}
+
+.feature-item:nth-child(2)::before {
+  background-image: url(../images/icons/clock.svg);
+}
+
+.feature-item:nth-child(3)::before {
+  background-image: url(../images/icons/diagram.svg);
+}
+
+.feature-item:nth-child(4)::before {
+  background-image: url(../images/icons/astronaut.svg);
+}
+
 .feature-title {
   margin-bottom: 10px;
 
@@ -324,6 +414,7 @@ ol {
 }
 
 /** Staff */
+
 .staff {
   background-color: var(--primary-bcg-color);
 }
@@ -359,9 +450,67 @@ ol {
 }
 
 .member-position {
+  margin-bottom: 16px;
   font-size: 16px;
   line-height: 1.18;
   text-align: center;
+}
+
+.member-info .socials {
+  display: flex;
+  padding: 0 32px;
+  outline: 1px solid tomato;
+}
+
+.socials .social-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.social-item a {
+  display: block;
+  width: 44px;
+  height: 44px;
+
+  background-color: var(--primary-white-color);
+
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 50%;
+}
+
+.instagram {
+  background-image: url(../images/icons/instagram.svg);
+}
+
+.twitter {
+  background-image: url(../images/icons/twitter.svg);
+}
+
+.facebook {
+  background-image: url(../images/icons/facebook.svg);
+}
+
+.linkedin {
+  background-image: url(../images/icons/linkedin.svg);
+}
+
+/** Clients */
+.clients {
+  display: flex;
+  margin-right: calc(-1 * var(--item-gap));
+}
+
+.clients > .client {
+  flex-basis: calc(100% / 6 - var(--item-gap));
+  margin-right: var(--item-gap);
+}
+
+.client-link {
+  display: block;
+  width: 170px;
+  height: 92px;
+  outline: 1px solid black;
 }
 
 /* ! ===================================THE END OF INDEX.HTML=================================== */

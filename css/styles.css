@@ -206,26 +206,21 @@ ol {
   color: var(--accent-color);
 }
 
-.contact-item {
+.contact-item .mail,
+.contact-item .tel {
   display: flex;
   align-items: center;
 }
 
-/* .mail, .tel {
-  display: flex;
-  align-items: center;
-} */
-
-.icon-envelope,
-.icon-smartphone {
+.icon-contact {
   margin-right: 10px;
-  fill: var(--secondary-icon-color);
+  fill: currentColor;
 }
 
-.icon-envelope:hover,
-.icon-smartphone:hover,
-.icon-envelope:focus,
-.icon-smartphone:focus {
+.mail:hover .icon-contact,
+.tel:hover .icon-contact,
+.mail:focus .icon-contact,
+.tel:focus .icon-contact {
   fill: var(--accent-color);
 }
 
@@ -321,8 +316,7 @@ ol {
 .overlay {
   height: 600px;
   max-width: 1600px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
   background-color: var(--secondary-bcg-color);
   background-image: linear-gradient(var(--hero-overlay-gradient)),
     url(../images/main-page/main/hero.jpg);
@@ -430,6 +424,7 @@ ol {
   width: 270px;
   background-color: var(--primary-white-color);
   box-shadow: var(--team-member-shadow);
+  border-radius: 1px;
 }
 
 .team > .team-member {
@@ -473,22 +468,22 @@ ol {
   height: 44px;
   align-items: center;
   justify-content: center;
+  border-radius: 50%;
 
   background-color: var(--primary-white-color);
+}
 
-  border-radius: 50%;
+.icon-network {
+  fill: var(--primary-icon-color);
 }
 
 .network:hover,
 .network:focus {
   background-color: var(--accent-color);
 }
-.icon-network {
-  fill: var(--primary-icon-color);
-}
 
-.icon-network:hover,
-.icon-network:focus {
+.network:hover .icon-network,
+.network:focus .icon-network {
   fill: var(--primary-white-color);
 }
 
@@ -498,7 +493,7 @@ ol {
   margin-right: calc(-1 * var(--item-gap));
 }
 
-.clients > .client {
+.clients > .client-item {
   flex-basis: calc(100% / 6 - var(--item-gap));
   margin-right: var(--item-gap);
 }
@@ -522,8 +517,8 @@ ol {
   border-color: var(--accent-color);
 }
 
-.client-logo:hover,
-.client-logo:focus {
+.client-link:hover .client-logo,
+.client-link:focus .client-logo {
   fill: var(--accent-color);
 }
 
@@ -600,9 +595,27 @@ ol {
   letter-spacing: 0.06em;
 }
 
-.project-caption {
+.project-subtitle {
   color: var(--primary-text-color);
   font-size: 16px;
   line-height: 1.87;
 }
 /* ! ================================THE END OF PORTFOLIO.HTML================================ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*/

@@ -182,7 +182,7 @@ ol {
 .site-nav .link,
 .contact-nav .link {
   display: block;
-  padding: 31px 0;
+  padding: 32px 0;
   font-weight: 500;
   font-size: inherit;
   letter-spacing: 0.02em;
@@ -373,7 +373,7 @@ ol {
   width: 270px;
 }
 
-.features .feature-item:not(:last-child) {
+.features > .feature-item:not(:last-child) {
   margin-right: 30px;
 }
 
@@ -405,7 +405,7 @@ ol {
   width: 370px;
 }
 
-.services .service-item:not(:last-child) {
+.services > .service-item:not(:last-child) {
   margin-right: 30px;
 }
 
@@ -429,6 +429,9 @@ ol {
 
 .team > .team-member {
   flex-basis: calc(100% / 4 - var(--item-gap));
+}
+
+.team > .team-member:not(:last-child) {
   margin-right: var(--item-gap);
 }
 
@@ -455,7 +458,7 @@ ol {
 
 .member-info .socials {
   display: flex;
-  padding: 0 32px;
+  justify-content: center;
 }
 
 .socials .social-item:not(:last-child) {
@@ -490,12 +493,11 @@ ol {
 /** Clients */
 .clients {
   display: flex;
-  margin-right: calc(-1 * var(--item-gap));
+  justify-content: space-between;
 }
 
 .clients > .client-item {
   flex-basis: calc(100% / 6 - var(--item-gap));
-  margin-right: var(--item-gap);
 }
 
 .client-link {
@@ -601,21 +603,3 @@ ol {
   line-height: 1.87;
 }
 /* ! ================================THE END OF PORTFOLIO.HTML================================ */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-*/
